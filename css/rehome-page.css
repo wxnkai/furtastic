@@ -1,0 +1,100 @@
+/* ============================================ Font ============================================ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+/* ============================================ Global style ============================================ */
+body {
+  font-family: "Poppins", sans-serif !important;
+}
+
+/* ============================================ Hero section ============================================ */
+.hero {
+  background: url("../assets/img/background/banner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.hero #subheading {
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.hero h1 {
+  color: black;
+}
+
+.hero #heading {
+  color: #5B4D42;
+  font-weight: bold;
+}
+
+.hero #description {
+  color: #211F19;
+}
+
+.hero .btn {
+  border-radius: 30px;
+  background-color: #5b4d42;
+  color: #ebe1e4;
+  position: relative;
+}
+
+.hero .btn:hover {
+  background-color: #ebe1e4;
+  color: #5b4d42;
+}
+
+/* ============================================ Form ============================================ */
+#page-content form {
+  background-color: #EFEBE0;
+}
+
+#page-content form #submitBtn:hover {
+  color: #5b4d42;
+  background-color: #ebe1e4;
+}
+
+#page-content form #clearBtn:hover {
+  color: #5b4d42;
+  background-color: #ebe1e4;
+}
+
+#page-content form #submitBtn {
+  color: #ebe1e4;
+  background-color: #5b4d42;
+  padding: 12px 100px;
+  display: inline-block;
+  border-radius: 25px;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+#page-content form #clearBtn {
+  color: #ebe1e4;
+  background-color: #5b4d42;
+  padding: 12px 106px;
+  display: inline-block;
+  border-radius: 25px;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+#page-content h5{
+  font-weight: bold;
+  color:#5B4D42;
+}
+
+#page-content .form-check-label {
+  font-weight: normal;
+  color: #5B4D42;
+}

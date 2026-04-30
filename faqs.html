@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>Furtastic</title>
+    <meta name="author" content="Joeee, Wenkai, QiaoYi, Chunshing">
+    <meta name="description" content="Pet Management Website">
+    <meta name="keywords" content="Pet, Management, Animal, cat, dog">
+    <link rel="icon" href="/assets/img/logo/logo.png">
+
+    <!-- ==========================================================
+                CSS
+    ========================================================== -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <!-- Font style -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins:400,700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome icons -->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    <!-- Core theme CSS-->
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="sub_page">
+    <div class="hero_area ">
+        <!-- ============== Loader ============== -->
+        <div class="loader_bg">
+            <div class="loader"><img src="assets/animation/loading.gif" alt="" /></div>
+        </div>
+
+        <!-- ============== Navigation Bar ============== -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top topnavbar">
+            <a class="navbar-brand" href="#page-top">
+                <img src="assets/img/logo/furtasticword4black.png" alt="Furtastic" height="60px" width="200px"
+                    id="homelogo">
+            </a>
+            <div class="sharethis-inline-share-buttons" data-title="I love Furtastic! Visit now at: "></div>
+            <div class="custom_menu-btn">
+                <button class="openbtn" onclick="openNav()">
+                    <span class="s-1">
+                    </span>
+                    <span class="s-2">
+                    </span>
+                    <span class="s-3">
+                    </span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Navigation Side Bar -->
+        <div class="navOverlay">
+            <div class="overlay-content">
+                <img src="/assets/img/logo/furtasticword4black.png" alt="logo" class="navlogo" width="250rem"
+                    style="padding-bottom: 20px;" />
+
+                <ul class="barlist">
+                    <li>
+                        <img src="assets/icon/home.png" alt="home" class="icon" />
+                        <a href="index.html">About</a>
+                    </li>
+                    <li>
+                        <img src="assets/icon/dogbowl.png" alt="Bowl" class="icon" />
+                        <a href="rehome-page.html">Pet Adoption</a>
+                    </li>
+                    <li>
+                        <img src="assets/icon/paw.png" alt="Lost" class="icon" />
+                        <a href="lost-and-found-page.html">Lost & Found</a>
+                    </li>
+                    <li>
+                        <img src="assets/icon/event.png" alt="Event" class="icon" />
+                        <a href="event.html">Event</a>
+                    </li>
+                    <li>
+                        <img src="assets/icon/instagram.png" alt="Event" class="icon" />
+                        <a href="socialmedia.html">Social Media</a>
+                    </li>
+                    <li>
+                        <img src="assets/icon/blog.png" alt="Event" class="icon" />
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <img src="assets/icon/testimonial.png" alt="Event" class="icon" />
+                        <a href="testimonial.html">Testimonial</a>
+                    </li>
+                    <li>
+                        <img src="assets/icon/faq.png" alt="Feedback" class="icon" />
+                        <a href="faqs.html" class="active">FAQs</a>
+                    </li>
+                    <li>
+                        <img src="assets/icon/email.png" alt="Event" class="icon" />
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+
+                    <li>
+                        <img src="assets/icon/logout.png" alt="Logout" class="icon logout" />
+                        <a href="#">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- ============== Hero Section ============== -->
+        <section>
+            <section class="hero-wrap hero-wrap-2"
+                style="background-image: url('assets/img/background/bg-heroindex1.svg');"
+                data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row no-gutters slider-text align-items-end">
+                        <div class="col-md-9 ftco-animate pb-5">
+                            <p class="breadcrumbs mb-2"><span class="mr-2"></span>
+                                <span>Where Every Pet's Journey is Furtastically Managed
+                                    <i class="ion-ios-arrow-forward"></i></span>
+                            </p>
+                            <h1 class="mb-0 bread">Furtastic FAQs</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- ============== FAQs Section ============== -->
+        <section class="container-fluid" id="faqs-section">
+            <!-- Search Bar -->
+            <div class="container">
+                <input class="form-control" id="faqsInput" type="search" placeholder="Search your Question here">
+            </div>
+
+            <!-- Display no FAQs -->
+            <div class="container-fluid align-items-center justify-content-center" id="noMatchingFAQs" style="display: none;">
+                No related FAQs. We are working on it... <br> You may get in touch with our service team for the question...
+            </div>
+
+            <div class="container">
+                <div class="accordion" id="accordion">
+                    <!-- Item 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#basicAccordionCollapseOne" aria-expanded="false"
+                                aria-controls="basicAccordionCollapseOne">
+                                How does Furtastic work?
+                            </button>
+                        </h2>
+
+                        <div id="basicAccordionCollapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="headingOne" data-bs-parent="#basicAccordion">
+                            <div class="accordion-body">
+                                Furtastic is your <strong>all-in-one pet management platform</strong>. Discover pet
+                                services, adopt pets, get
+                                pet care advice, and connect with the pet-loving community, all in one place.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 1 ends -->
+
+                    <!-- Item 2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#basicAccordionCollapseTwo" aria-expanded="false"
+                                aria-controls="basicAccordionCollapseTwo">
+                                Is Furtastic free to use?
+                            </button>
+                        </h2>
+
+                        <div id="basicAccordionCollapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="headingTwo" data-bs-parent="#basicAccordion">
+                            <div class="accordion-body">
+                                <strong>Yes</strong>, Furtastic is free to use for pet owners and enthusiasts. There are
+                                no hidden charges.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 2 ends -->
+
+                    <!-- Item 3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#basicAccordionCollapseThree" aria-expanded="false"
+                                aria-controls="basicAccordionCollapseThree">
+                                What do I do if I've lost my pet?
+                            </button>
+                        </h2>
+
+                        <div id="basicAccordionCollapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="headingThree" data-bs-parent="#basicAccordion">
+                            <div class="accordion-body">
+                                Use our <strong>'Lost and Found'</strong> function to report your lost pet and get the
+                                word out to our community.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 3 ends -->
+
+                    <!-- Item 4 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#basicAccordionCollapseFour" aria-expanded="false"
+                                aria-controls="basicAccordionCollapseFour">
+                                How can I share my pet's story on Furtastic's social media?
+                            </button>
+                        </h2>
+
+                        <div id="basicAccordionCollapseFour" class="accordion-collapse collapse"
+                            aria-labelledby="headingFour" data-bs-parent="#basicAccordion">
+                            <div class="accordion-body">
+                                Join our <strong>social media community</strong> and share your pet's adventures with
+                                fellow pet lovers. Use hashtack &#35;Furtastic &#35;PetLovers &#35;DiscoverFurtastic !
+                                Follow us to get featured!
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 4 ends -->
+
+                    <!-- Item 5 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#basicAccordionCollapseFive" aria-expanded="false"
+                                aria-controls="basicAccordionCollapseFive">
+                                Can I book pet appointments through Furtastic?
+                            </button>
+                        </h2>
+
+                        <div id="basicAccordionCollapseFive" class="accordion-collapse collapse"
+                            aria-labelledby="headingFive" data-bs-parent="#basicAccordion">
+                            <div class="accordion-body">
+                                <strong>Yes</strong>, our platform allows you to discover pet services and book
+                                appointments conveniently. Navigate to <strong>"Appointment"</strong> for more.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 5 ends -->
+
+                    <!-- Item 6 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#basicAccordionCollapseSix" aria-expanded="false"
+                                aria-controls="basicAccordionCollapseSix">
+                                Is my pet's information safe on Furtastic?
+                            </button>
+                        </h2>
+
+                        <div id="basicAccordionCollapseSix" class="accordion-collapse collapse"
+                            aria-labelledby="headingSix" data-bs-parent="#basicAccordion">
+                            <div class="accordion-body">
+                                <strong>Yes</strong>, We take data security seriously. Your pet's information is kept
+                                secure and confidential.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 6 ends -->
+
+                    <!-- Item 7 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#basicAccordionCollapseSeven" aria-expanded="false"
+                                aria-controls="basicAccordionCollapseSeven">
+                                How can I get in touch with Furtastic's support team?
+                            </button>
+                        </h2>
+
+                        <div id="basicAccordionCollapseSeven" class="accordion-collapse collapse"
+                            aria-labelledby="headingSeven" data-bs-parent="#basicAccordion">
+                            <div class="accordion-body">
+                                Visit our page to reach our support team.
+                                Or you can visit our <strong>'Social Media'</strong> page to get in touch with
+                                Furtastic's support team.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 7 ends -->
+
+                    <!-- Item 8 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#basicAccordionCollapseEight" aria-expanded="false"
+                                aria-controls="basicAccordionCollapseEight">
+                                Can I promote my pet-related event on Furtastic?
+                            </button>
+                        </h2>
+
+                        <div id="basicAccordionCollapseEight" class="accordion-collapse collapse"
+                            aria-labelledby="headingEight" data-bs-parent="#basicAccordion">
+                            <div class="accordion-body">
+                                <strong>Yes</strong>, if you're hosting a pet event, contact us to discuss opportunities
+                                for promotion and collaboration.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 8 ends -->
+
+                    <!-- Item 9 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingNine">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#basicAccordionCollapseNine" aria-expanded="false"
+                                aria-controls="basicAccordionCollapseNine">
+                                Are there mobile apps for Furtastic?
+                            </button>
+                        </h2>
+
+                        <div id="basicAccordionCollapseNine" class="accordion-collapse collapse"
+                            aria-labelledby="headingNine" data-bs-parent="#basicAccordion">
+                            <div class="accordion-body">
+                                Currently, we offer a <strong>responsive website</strong> that works well on both
+                                desktop and mobile devices. We may explore mobile apps in the future.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 9 ends -->
+
+                    <!-- Item 10 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#basicAccordionCollapseTen" aria-expanded="false"
+                                aria-controls="basicAccordionCollapseTen">
+                                Is there a pet blog on Furtastic?
+                            </button>
+                        </h2>
+
+                        <div id="basicAccordionCollapseTen" class="accordion-collapse collapse"
+                            aria-labelledby="headingTen" data-bs-parent="#basicAccordion">
+                            <div class="accordion-body">
+                                <strong>Yes</strong>, we have a pet-centric blog filled with informative articles, tips,
+                                and heartwarming stories.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 10 ends -->
+
+                    <!-- Item 11 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading11">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#basicAccordionCollapse11" aria-expanded="false"
+                                aria-controls="basicAccordionCollapse11">
+                                How can I create an account on Furtastic?
+                            </button>
+                        </h2>
+
+                        <div id="basicAccordionCollapse11" class="accordion-collapse collapse"
+                            aria-labelledby="heading11" data-bs-parent="#basicAccordion">
+                            <div class="accordion-body">
+                                To create an account, click on the <strong>"Sign Up" or "Register"</strong> button on
+                                the homepage.
+                                Follow the steps to provide your information and create your profile.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 11 ends -->
+
+                    <!-- Item 12 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading12">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#basicAccordionCollapse12" aria-expanded="false"
+                                aria-controls="basicAccordionCollapse12">
+                                What should I do if I find a bug or have a suggestion for improving the website?
+                            </button>
+                        </h2>
+
+                        <div id="basicAccordionCollapse12" class="accordion-collapse collapse"
+                            aria-labelledby="heading12" data-bs-parent="#basicAccordion">
+                            <div class="accordion-body">
+                                We value your feedback! Please report bugs and provide suggestions through our support
+                                channels.
+                                You can easily navigate to the <strong>'Contact' page or 'Social Media'</strong> page.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 12 ends -->
+
+                    <!-- Item 13 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading13">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#basicAccordionCollapse13" aria-expanded="false"
+                                aria-controls="basicAccordionCollapse13">
+                                How can I stay informed about updates and new features on Furtastic?
+                            </button>
+                        </h2>
+
+                        <div id="basicAccordionCollapse13" class="accordion-collapse collapse"
+                            aria-labelledby="heading13" data-bs-parent="#basicAccordion">
+                            <div class="accordion-body">
+                                Subscribe to our <strong>newsletter</strong> or <strong>follow us on social
+                                    media</strong> to receive updates and news
+                                about Furtastic's latest features and offerings.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 13 ends -->
+
+                    <!-- Item 14 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading14">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#basicAccordionCollapse14" aria-expanded="false"
+                                aria-controls="basicAccordionCollapse14">
+                                Is Furtastic available in multiple languages?
+                            </button>
+                        </h2>
+
+                        <div id="basicAccordionCollapse14" class="accordion-collapse collapse"
+                            aria-labelledby="heading14" data-bs-parent="#basicAccordion">
+                            <div class="accordion-body">
+                                Currently, Furtastic is available in only English. We may expand our language
+                                options in the future.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 14 ends -->
+
+                    <!-- Item 15 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading15">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#basicAccordionCollapse15" aria-expanded="false"
+                                aria-controls="basicAccordionCollapse15">
+                                What should I do if I encounter a technical issue on the website?
+                            </button>
+                        </h2>
+
+                        <div id="basicAccordionCollapse15" class="accordion-collapse collapse"
+                            aria-labelledby="heading15" data-bs-parent="#basicAccordion">
+                            <div class="accordion-body">
+                                If you experience technical difficulties, please contact our support team through the
+                                provided channels, and we'll assist you promptly. You can easily navigate to the
+                                <strong>'Contact' page or 'Social Media'</strong> page.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 15 ends -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========== Section for Telegram and Whatsapp ========== -->
+        <section class="container-fluid d-flex flex-column align-items-center justify-content-center" id="send-section"
+            style="padding-bottom: 10rem;">
+            <div class="container d-flex flex-column align-items-center justify-content-center">
+                <h2 class="text-white mb-5 mt-5">Having Trouble? Drop us a message.</h2>
+                <div class="container px-4 px-lg-5">
+                    <div class="row gx-4 gx-lg-5">
+                        <!-- Email -->
+                        <div class="col-md-4 mb-5 mb-md-0 ">
+                            <div class="card py-4 h-100 social" data-aos="fade-up" data-aos-delay="100">
+                                <div class="card-body text-center justify-content-center">
+                                    <i class="fas fa-envelope mb-2 fa-2x"></i>
+                                    <h4 class="text-uppercase m-0">Email us</h4>
+                                    <hr class="my-4 mx-auto" />
+                                    <div class="small text-black">
+                                        <a class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+                                            href=“contact.html”>furtastic2023@gmail.com</a>
+                                    </div>
+                                    <a class="d-flex justify-content-center drop">
+                                        <ul>
+                                            <li>
+                                                S E N D
+                                                <span></span><span></span><span></span><span></span>
+                                            </li>
+                                        </ul>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Telegram -->
+                        <div class="col-md-4 mb-5 mb-md-0 ">
+                            <div class="card py-4 h-100 social" data-aos="fade-up" data-aos-delay="100">
+                                <div class="card-body text-center justify-content-center">
+                                    <i class="fa-brands fa-telegram mb-2 fa-2x"></i>
+                                    <h4 class="text-uppercase m-0">Telegram us</h4>
+                                    <hr class="my-4 mx-auto" />
+                                    <div class="small text-black">
+                                        <a class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+                                            href=“https://t.me/furtastic2023”>https://t.me/furtastic2023</a>
+                                    </div>
+                                    <a class="d-flex justify-content-center drop">
+                                        <ul>
+                                            <li>
+                                                S E N D
+                                                <span></span><span></span><span></span><span></span>
+                                            </li>
+                                        </ul>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Whatsapp -->
+                        <div class="col-md-4 mb-5 mb-md-0 ">
+                            <div class="card py-4 h-100 social" data-aos="fade-up" data-aos-delay="100">
+                                <div class="card-body text-center">
+                                    <i class="fa-brands fa-whatsapp mb-2 fa-2x"></i>
+                                    <h4 class="text-uppercase m-0">Whatsapp Us</h4>
+                                    <hr class="my-4 mx-auto" />
+                                    <div class="small text-black-50">+6017-7700711</div>
+                                    <a class="d-flex justify-content-center drop"
+                                        href="https://api.whatsapp.com/send?phone=+60177700711&text=Hi%20Furtastic!%F0%9F%90%BE%20I%20would%20like%20to%20ask%20you%20about...">
+                                        <ul>
+                                            <li>
+                                                S E N D
+                                                <span></span><span></span><span></span><span></span>
+                                            </li>
+                                        </ul>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--  ====================== FOOTER ====================== -->
+        <footer class="footer small text-center text-white-50">
+            <div class="container-fluid waves">
+                <div class="wave" id="wave1"></div>
+                <div class="wave" id="wave2"></div>
+                <div class="wave" id="wave3"></div>
+                <div class="wave" id="wave4"></div>
+            </div>
+            <div class="social d-flex justify-content-center align-items-center">
+                <a class="mx-2" href="https://instagram.com/_furrtastic_?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D"><i
+                        class="fab fa-instagram"></i></a>
+                <a class="mx-2" href="https://twitter.com/Furtastic2023"><img src="/assets/icon/twitter.svg" alt=""
+                        style="width: 1.5rem; height: 1.5rem; padding-bottom: 5px;" /></a>
+                <a class="mx-2" href="https://www.facebook.com/furtastic.2023?mibextid=ZbWKwL"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a class="mx-2" href="https://pin.it/7Gfff5a"><i class="fab fa-pinterest"></i></a>
+                <a class="mx-2" href="https://github.com/wthislifehuh/Furtastic"><i class="fab fa-github"></i></a>
+                <a class="mx-2" href="https://t.me/furtastic2023"><i class="fab fa-telegram"></i></a>
+            </div>
+            <div class="container px-4 px-lg-5">
+                <p>
+                    &copy; Furtastic 2023 | All Rights Reserved
+                </p>
+            </div>
+        </footer>
+        <!-- END OF FOOTER -->
+
+        <!-- ==========================================================
+                JavaScript
+        ========================================================== -->
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- Subscribe Social Media Plugins -->
+        <script type="text/javascript"
+            src="https://platform-api.sharethis.com/js/sharethis.js#property=6504b58b572cd20019e849c8&product=inline-share-buttons&source=platform"
+            async="async"></script>
+        <!-- Social Media -->
+        <script async src="//www.instagram.com/embed.js"></script>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+        <!-- Custom JS -->
+        <script>
+            /* ===============================================
+            Toggle Side Bar
+            ============================================== */
+            function openNav() {
+                document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style");
+
+                var navOverlay = document.querySelector(".navOverlay");
+                var shareButtons = document.querySelector(".sharethis-inline-share-buttons");
+
+                navOverlay.classList.toggle("menu_width");
+
+                if (navOverlay.classList.contains("menu_width")) {
+                    shareButtons.style.display = "none";
+                } else {
+                    shareButtons.style.display = "block";
+                }
+            }
+
+
+            $(document).ready(function () {
+                $("#faqsInput").on("keyup", function () {
+                    var value = $(this).val().toLowerCase();
+                    var items = $(".accordion-item");
+                    var matchingItems = items.filter(function () {
+                        return $(this).text().toLowerCase().indexOf(value) > -1;
+                    });
+
+                    if (matchingItems.length > 0) {
+                        // At least one matching FAQ found, show matching items and hide message
+                        items.hide();
+                        matchingItems.show();
+                        $("#noMatchingFAQs").hide();
+                    } else {
+                        // No matching FAQs found, hide all items and show message
+                        items.hide();
+                        $("#noMatchingFAQs").show();
+                    }
+                });
+            });
+        </script>
+
+</body>
+
+</html>

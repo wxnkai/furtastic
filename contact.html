@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>Furtastic</title>
+    <meta name="author" content="Joeee, Wenkai, QiaoYi, Chunshing">
+    <meta name="description" content="Pet Management Website">
+    <meta name="keywords" content="Pet, Management, Animal, cat, dog">
+    <link rel="icon" href="/assets/img/logo/logo.png">
+
+    <!-- ==========================================================
+                CSS
+    ========================================================== -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <!-- Font style -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins:400,700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome icons -->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    <!-- Core theme CSS-->
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="sub_page">
+    <div class="hero_area ">
+        <!-- ============== Loader ============== -->
+        <div class="loader_bg">
+            <div class="loader"><img src="assets/animation/loading.gif" alt="" /></div>
+        </div>
+
+        <!-- ============== Navigation Bar ============== -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top topnavbar">
+            <a class="navbar-brand" href="#page-top">
+                <img src="assets/img/logo/furtasticword4black.png" alt="Furtastic" height="60px" width="200px"
+                    id="homelogo">
+            </a>
+            <div class="sharethis-inline-share-buttons" data-title="I love Furtastic! Visit now at: "></div>
+            <div class="custom_menu-btn">
+                <button class="openbtn" onclick="openNav()">
+                    <span class="s-1">
+                    </span>
+                    <span class="s-2">
+                    </span>
+                    <span class="s-3">
+                    </span>
+                </button>
+            </div>
+        </nav>
+
+
+        <!-- Navigation Side Bar -->
+        <div class="navOverlay">
+            <div class="overlay-content">
+                <img src="/assets/img/logo/furtasticword4black.png" alt="logo" class="navlogo" width="250rem"
+                    style="padding-bottom: 20px;" />
+
+                <ul class="barlist">
+                    <li>
+                        <img src="assets/icon/home.png" alt="home" class="icon" />
+                        <a href="index.html">About</a>
+                    </li>
+                    <li>
+                        <img src="assets/icon/dogbowl.png" alt="Bowl" class="icon" />
+                        <a href="#">Pet Adoption</a>
+                    </li>
+                    <li>
+                        <img src="assets/icon/paw.png" alt="Lost" class="icon" />
+                        <a href="#">Lost & Found</a>
+                    </li>
+                    <li>
+                        <img src="assets/icon/event.png" alt="Event" class="icon" />
+                        <a href="#">Event</a>
+                    </li>
+                    <li>
+                        <img src="assets/icon/instagram.png" alt="Event" class="icon" />
+                        <a href="#">Social Media</a>
+                    </li>
+                    <li>
+                        <img src="assets/icon/blog.png" alt="Event" class="icon" />
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <img src="assets/icon/testimonial.png" alt="Event" class="icon" />
+                        <a href="testimonial.html">Testimonial</a>
+                    </li>
+                    <li>
+                        <img src="assets/icon/faq.png" alt="Feedback" class="icon" />
+                        <a href="faqs.html">FAQs</a>
+                    </li>
+                    <li>
+                        <img src="assets/icon/email.png" alt="Event" class="icon" />
+                        <a href="contact.html" class="active">Contact Us</a>
+                    </li>
+                    <li>
+                        <img src="assets/icon/logout.png" alt="Logout" class="icon logout" />
+                        <a href="#">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--  ====================== CONTACT SECTION ====================== -->
+
+        <section class="contact_section layout_padding-top mt-5" style="padding-top: 3rem;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-5 offset-md-1">
+                        <div class="form_container">
+                            <div class="heading_container">
+                                <img src="assets/img/logo/logo2.svg" alt="" width="100px">
+                                <h2>
+                                    Get In Touch
+                                </h2>
+                                <p>
+                                    You are more than welcome to send us a message to express your thought!
+                                </p>
+                            </div>
+                            <form id="contact-form">
+                                <div>
+                                    <input type="text" name="name" id="name" placeholder="Full Name" required />
+                                </div>
+                                <div>
+                                    <input type="tel" name="phone" id="phone" placeholder="Phone number"
+                                        pattern="[0-9]{10}" required />
+                                </div>
+                                <div>
+                                    <input type="email" name="email" id="email" placeholder="Email" required />
+                                </div>
+                                <div>
+                                    <input name="message" id="message" class="message-box" placeholder="Message"
+                                        required></input>
+                                </div>
+                                <!-- Feedback -->
+                                <div class="valid-feedback">Thank you for reaching out to us! The email has been sent.
+                                </div>
+                                <div class="invalid-feedback"></div>
+                                <!-- Send Button -->
+                                <button type="submit" class="d-flex sendButton">
+                                    <ul>
+                                        <li>
+                                            S E N D
+                                            <span></span><span></span><span></span><span></span>
+                                        </li>
+                                    </ul>
+                                </button>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-6 px-0">
+                        <div class="map_container">
+                            <div class="map-responsive">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.427864006644!2d101.13629967556957!3d4.33046973426309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cb1d573f9aabf3%3A0x28cc06c069e40dce!2sUniversiti%20Tunku%20Abdul%20Rahman%20Kampar%20Campus!5e0!3m2!1sen!2smy!4v1694800433227!5m2!1sen!2smy"
+                                    width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end contact section -->
+
+        <!-- ====================== Display ====================== -->
+        <section class="display-section text-center" id="display" style="padding-bottom: 8rem;">
+            <div class="text container">
+                <p class="text-black" id="sameline">Furtastic is</p>
+                <p id="sameline">
+                    <span class="word wisteria"> caring.</span>
+                    <span class="word belize"> efficient.</span>
+                    <span class="word pomegranate"> reliable.</span>
+                    <span class="word green"> tailored.</span>
+                    <span class="word midnight"> Furtastic.</span>
+                </p>
+            </div>
+        </section>
+
+
+        <!--  ====================== FOOTER ====================== -->
+        <footer class="footer small text-center text-white-50">
+            <div class="container-fluid waves">
+                <div class="wave" id="wave1"></div>
+                <div class="wave" id="wave2"></div>
+                <div class="wave" id="wave3"></div>
+                <div class="wave" id="wave4"></div>
+            </div>
+            <div class="social d-flex justify-content-center align-items-center">
+                <a class="mx-2" href="https://instagram.com/_furrtastic_?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D"><i
+                        class="fab fa-instagram"></i></a>
+                <a class="mx-2" href="https://twitter.com/Furtastic2023"><img src="/assets/icon/twitter.svg" alt=""
+                        style="width: 1.5rem; height: 1.5rem; padding-bottom: 5px;" /></a>
+                <a class="mx-2" href="https://www.facebook.com/furtastic.2023?mibextid=ZbWKwL"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a class="mx-2" href="https://pin.it/7Gfff5a"><i class="fab fa-pinterest"></i></a>
+                <a class="mx-2" href="https://github.com/wthislifehuh/Furtastic"><i class="fab fa-github"></i></a>
+                <a class="mx-2" href="https://t.me/furtastic2023"><i class="fab fa-telegram"></i></a>
+            </div>
+            <div class="container px-4 px-lg-5">
+                <p>
+                    &copy; Furtastic 2023 | All Rights Reserved
+                </p>
+            </div>
+        </footer>
+        <!-- END OF FOOTER -->
+
+        <!-- ==========================================================
+                JavaScript
+        ========================================================== -->
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- Subscribe Social Media Plugins -->
+        <script type="text/javascript"
+            src="https://platform-api.sharethis.com/js/sharethis.js#property=6504b58b572cd20019e849c8&product=inline-share-buttons&source=platform"
+            async="async"></script>
+        <!-- Custom JS -->
+        <script>
+            /* ===============================================
+            Toggle Side Bar
+            ============================================== */
+            function openNav() {
+                document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style");
+
+                var navOverlay = document.querySelector(".navOverlay");
+                var shareButtons = document.querySelector(".sharethis-inline-share-buttons");
+
+                navOverlay.classList.toggle("menu_width");
+
+                if (navOverlay.classList.contains("menu_width")) {
+                    shareButtons.style.display = "none";
+                } else {
+                    shareButtons.style.display = "block";
+                }
+            }
+
+            $(document).ready(function () {
+                // Add event listener for form submission
+                $('#contact-form').submit(function (event) {
+                    event.preventDefault(); // Prevent default form submission
+                    sendEmail();
+
+                    // Function to send the email
+                    function sendEmail() {
+                        $.ajax({
+                            type: 'POST',
+                            url: "sendEmail.php", // Replace with the correct path to your PHP script
+                            data: $('#contact-form').serialize(), // Serialize the form data
+                            dataType: 'json',
+                            success: function (response) {
+                                if (response.success) {
+                                    // Clear the form
+                                    $('#contact-form')[0].reset();
+                                    alert(response.message);
+                                } else {
+                                    $('#message').removeClass('is-valid').addClass('is-invalid');
+                                    $(".invalid-feedback").html("Email sending failed. Please try again later.");
+                                    $(".invalid-feedback").show();
+                                    alert(response.message);
+                                }
+                            },
+                            error: function () {
+                                $('#message').removeClass('is-valid').addClass('is-invalid');
+                                $(".invalid-feedback").html("An error occurred while sending the email. Please try again later.");
+                                $(".invalid-feedback").show();
+                                alert(response.message);
+                            }
+                        });
+
+                    }
+                });
+            });
+        </script>
+
+</body>
+
+</html>

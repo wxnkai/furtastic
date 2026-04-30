@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>Furtastic</title>
+    <meta name="author" content="Joeee, Wenkai, QiaoYi, Chunshing">
+    <meta name="description" content="Pet Management Website">
+    <meta name="keywords" content="Pet, Management, Animal, cat, dog">
+    <link rel="icon" href="assets/img/logo/logo.png">
+
+    <!-- Font Awesome icons -->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet" />
+
+    <!-- Core theme CSS-->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- AOS Files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+
+
+<body id="page-top">
+    <!-- ============== Loader ============== -->
+    <div class="loader_bg">
+        <div class="loader"><img src="assets/animation/loading.gif" alt="" /></div>
+    </div>
+
+    <!-- ============== Cookies Consent ============== -->
+    <div class="modal fade" id="cookie" tabindex="-1" aria-labelledby="cookieconsentLabel2" aria-hidden="true"
+        data-mdb-backdrop="static" data-mdb-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary text-white">
+                    <h5 class="modal-title" id="cookieconsentLabel">Cookies & Privacy</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-3 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-cookie-bite fa-4x text-dark"></i>
+                        </div>
+
+                        <div class="col-9">
+                            <p>This website uses cookies to ensure you get the best experience on our website.<a
+                                    class="d-block text-black"
+                                    href="https://www.cloudflare.com/learning/privacy/what-are-cookies/">Read more about
+                                    cookies</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://www.cloudflare.com/learning/privacy/what-are-cookies/"><button type="button"
+                            class="btn btn-outline-secondary" data-mdb-dismiss="modal">Learn More</button></a>
+                    <button type="button" class="btn btn-dark" id="acceptCookies" data-mdb-dismiss="modal">
+                        Accept
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ============== Log In Successfully Message ============== -->
+    <div class="modal fade" id="loginMessage" tabindex="-1" aria-labelledby="cookieconsentLabel2" aria-hidden="true"
+        data-mdb-backdrop="static" data-mdb-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">Login Successfully</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-3 d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-4x fa-right-to-bracket"></i>
+                        </div>
+
+                        <div class="col-9">
+                            <p id="loginMsg">You have logged in successfully to Furtastic! Now you will be directed to
+                                Furtastic Home
+                                Page.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" id="loginok" data-mdb-dismiss="modal">
+                        Okay
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ============== Register Successfully Message ============== -->
+    <div class="modal fade" id="registerMessage" tabindex="-1" aria-labelledby="cookieconsentLabel2" aria-hidden="true"
+        data-mdb-backdrop="static" data-mdb-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">Register Successfully</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-3 d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-4x fa-right-to-bracket"></i>
+                        </div>
+                        <div class="col-9">
+                            <p id="registerMsg">You have successfully register to Furtastic! Now you will be directed to
+                                Furtastic Home Page.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" id="registerok" data-mdb-dismiss="modal">
+                        Okay
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ============== Log In/Register before Access Message ============== -->
+    <div class="modal fade" id="accessMessage" tabindex="-1" aria-labelledby="cookieconsentLabel2" aria-hidden="true"
+        data-mdb-backdrop="static" data-mdb-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">Please Login</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-3 d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-4x fa-right-to-bracket"></i>
+                        </div>
+                        <div class="col-9">
+                            <p id="accessMsg">You need to log in before accessing to Furtastic Home Page! Log in or
+                                Register Now! Thank you for using Furtastic.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success register" id="ok" data-mdb-dismiss="modal">
+                        Okay
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============== Navigation Bar ============== -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand" href="#page-top">
+                <img src="assets/img/logo/furtasticword4black.png" id="logo" alt="Furtastic" height="60px"
+                    width="200px">
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#service">Service</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
+                    <!-- Drop Down Buttons-->
+                    <div class="nav-item" id="navDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Furtastic Pet
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="rehome-page.html">Pet Adoption</a></li>
+                                    <li><a class="dropdown-item" href="lost-and-found-page.html">Lost and Found</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item register">Log in For More</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <li class="nav-item"><button class="bthLogin-popup">Login</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== Login Form ========== -->
+    <div class="wrapper">
+        <span class="icon-close">
+            <ion-icon name="close"></ion-icon>
+        </span>
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="javascript:void(0);" id="login-form">
+                <!-- Email -->
+                <div class="input-box form-group">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" id="login_email" required>
+                    <label>Email</label>
+                </div>
+                <!-- Password -->
+                <div class="input-box form-group">
+                    <span class="icon">
+                        <button type="button" id="show_password1"><ion-icon name="eye-off"
+                                id="icon1"></ion-icon></button>
+                    </span>
+                    <input type="password" id="login_password" required>
+                    <label>Password</label>
+                </div>
+                <!-- Remember -->
+                <div class="remember-forgot">
+                    <label><input type="checkbox" id="rememberme">
+                        Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <!-- Button -->
+                <div id="login_feedback">
+                    <button type="submit" id="login-btn" class="bth">Login</button>
+                    <!-- Feedback -->
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback"></div>
+                </div>
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+
+        <!-- ========== Registration Form ========== -->
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form action="javascript:void(0);" id="registration-form">
+                <!-- Username -->
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                    <input type="text" id="username" required>
+                    <label>Username</label>
+                </div>
+                <!-- Email -->
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" id="reg_email" required>
+                    <label>Email</label>
+                </div>
+                <!-- Password -->
+                <div class="input-box">
+                    <span class="icon">
+                        <button type="button" id="show_password2"><ion-icon name="eye-off"
+                                id="icon2"></ion-icon></button>
+                    </span>
+                    <input type="password" id="reg_password" required>
+                    <label>Password</label>
+                </div>
+                <!-- Password Confirmation-->
+                <div class="input-box">
+                    <span class="icon">
+                        <button type="button" id="show_password3"><ion-icon name="eye-off"
+                                id="icon3"></ion-icon></button>
+                    </span>
+                    <input type="password" id="confirm_password" required>
+                    <label>Confirm Password</label>
+                </div>
+                <!-- Remember -->
+                <div class="remember-forgot">
+                    <label><input type="checkbox" required>
+                        I agree to the <a href="t&c.html"
+                            class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">terms
+                            & conditions</a></label>
+                </div>
+                <!-- Button -->
+                <div id="register_feedback">
+                    <button type="submit" id="register-btn" class="bth">Register</button>
+                    <!-- Feedback -->
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback"></div>
+                </div>
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ====================== Masthead ====================== -->
+    <header class="masthead">
+        <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+            <div class="d-flex justify-content-center">
+                <div class="text-center">
+                    <h1 class="mx-auto my-0 text-uppercase">
+                        <div class="title">
+                            <span>F</span>
+                            <span>U</span>
+                            <span>R</span>
+                            <span>T</span>
+                            <span>A</span>
+                            <span>S</span>
+                            <span>T</span>
+                            <span>I</span>
+                            <span>C</span>
+                        </div>
+                    </h1>
+                    <div class="typewriter-container">
+                        <div class="typewriter">
+                            <h3>Where Every Pet's Journey is Furtastically Managed.</h3>
+                        </div>
+                    </div>
+                    <!-- Get Started Button -->
+                    <div class="d-flex justify-content-center">
+                        <a href="#about">
+                            <ul>
+                                <li>
+                                    get started
+                                    <span></span><span></span><span></span><span></span>
+                                </li>
+                            </ul>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ====================== About ====================== -->
+    <section class="about-section text-center" id="about">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="text-white mb-4">Welcome to Furtastic</h2>
+                    <h3 class="text-white mb-4">Your Ultimate Pet Management Solution</h3>
+                    <p class="text-white-50">
+                        At Furtastic, we understand that your pets are more than just animals;
+                        they are beloved members of your family. That's why you need this comprehensive and
+                        user-friendly platform to help you manage every aspect of pet care and well-being with ease and
+                        precision.
+                    </p>
+                </div>
+            </div>
+            <div class="container px-4 px-lg-5">
+                <img class="img-fluid" src="assets/img/background/bg-about.jpg" alt="..." />
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================== Display ====================== -->
+    <section class="display-section text-center" id="display">
+        <div class="text container">
+            <p class="text-black" id="sameline">Furtastic is</p>
+            <p id="sameline">
+                <span class="word wisteria"> caring.</span>
+                <span class="word belize"> efficient.</span>
+                <span class="word pomegranate"> reliable.</span>
+                <span class="word green"> tailored.</span>
+                <span class="word midnight"> Furtastic.</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- ====================== Service ====================== -->
+    <section class="service-section bg-light" id="service">
+        <div class="container px-4 px-lg-5">
+            <!-- Featured Service Row-->
+            <div class="row gx-0 mb-4 mb-lg-5 align-items-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-xl-6 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" id="bgpic1"
+                        src="assets/img/background/girlwithdog.svg" alt="..." />
+                </div>
+                <div class="col-xl-6 col-lg-5">
+                    <div class="featured-text text-center text-lg-left">
+                        <h4>What Makes Furtastic Pawsitively Unique?</h4>
+                        <p class="text-black-50 mb-0">Furtastic stands out with
+                            streamlined pet profiles, integrated health tracking, lost pet alerts, and a thriving
+                            pet-loving community. Explore pet events, make appointment, discover pet-friendly
+                            locations, and shop for top-quality supplies. We're your one-stop platform for comprehensive
+                            pet care, ensuring your furry friends receive the love and attention they deserve.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service First Row-->
+            <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                <div class="col-lg-6"><img class="img-fluid" src="assets/img/background/service1.jpg" alt="..." /></div>
+                <div class="col-lg-6">
+                    <div class="bg-black text-center h-100 service">
+                        <div class="d-flex h-100">
+                            <div class="service-text w-100 my-auto text-center text-lg-left" data-aos="fade-up"
+                                data-aos-delay="100">
+                                <h4 class="text-white">Streamlined Pet Profiles</h4>
+                                <p class="mb-0 text-white-50">Create detailed profiles for your furry friends, including
+                                    vital information like medical records, dietary preferences, and grooming schedules.
+                                    Keep all your pet's essential details in one place for easy access.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Second Row-->
+            <div class="row gx-0 justify-content-center">
+                <div class="col-lg-6"><img class="img-fluid" src="assets/img/background/service2.jpg" alt="..." /></div>
+                <div class="col-lg-6 order-lg-first">
+                    <div class="bg-black text-center h-100 service">
+                        <div class="d-flex h-100">
+                            <div class="service-text w-100 my-auto text-center text-lg-right" data-aos="fade-up"
+                                data-aos-delay="100">
+                                <h4 class="text-white">Adoption Made Simple</h4>
+                                <p class="mb-0 text-white-50">Discover your perfect furry companion. At Furtastic, we
+                                    believe in giving every pet a loving home, and we've made the adoption process as
+                                    easy as a wag of the tail.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Third Row-->
+            <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                <div class="col-lg-6"><img class="img-fluid" src="assets/img/background/service3.jpg" alt="..." /></div>
+                <div class="col-lg-6">
+                    <div class="bg-black text-center h-100 service">
+                        <div class="d-flex h-100">
+                            <div class="service-text w-100 my-auto text-center text-lg-left" data-aos="fade-up"
+                                data-aos-delay="100">
+                                <h4 class="text-white">Pet-Friendly Locations</h4>
+                                <p class="mb-0 text-white-50">Create detailed profiles for your furry friends, including
+                                    vital information like medical records, dietary preferences, and grooming schedules.
+                                    Keep all your pet's essential details in one place for easy access.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Forth Row-->
+            <div class="row gx-0 justify-content-center">
+                <div class="col-lg-6"><img class="img-fluid" src="assets/img/background/service4.jpg" alt="..." /></div>
+                <div class="col-lg-6 order-lg-first">
+                    <div class="bg-black text-center h-100 service">
+                        <div class="d-flex h-100">
+                            <div class="service-text w-100 my-auto text-center text-lg-right" data-aos="fade-up"
+                                data-aos-delay="100">
+                                <h4 class="text-white">Powerful Appointment Booking</h4>
+                                <p class="mb-0 text-white-50">Our user-friendly appointment booking system empowers you
+                                    to schedule check-ups, grooming sessions, and training classes with just a few
+                                    clicks.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sign Up Now Button -->
+            <div class="d-flex justify-content-center">
+                <a id="unlock">
+                    <ul>
+                        <li>
+                            Sign Up Now to Unlock More Tailored Features of Furtastic!
+                            <span></span><span></span><span></span><span></span>
+                        </li>
+                    </ul>
+                    </a>
+            </div>
+        </div>
+    </section>
+
+    <!--  ====================== Sign Up ====================== -->
+    <section class="signup-section" id="signup">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-md-10 col-lg-8 mx-auto text-center" data-aos="fade-up" data-aos-delay="100">
+                    <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+                    <h2 class="text-white mb-5">
+                        Subscribe to receive updates!</h2>
+                    <!-- This form is pre-integrated with SB Forms at https://startbootstrap.com/solution/contact-forms-->
+                    <!-- API token: 2475dd40-c010-4d45-9ad9-adc83870c16c-->
+                    <form class="form-signup" id="contactForm"
+                        data-sb-form-api-token="2475dd40-c010-4d45-9ad9-adc83870c16c">
+                        <!-- Email address input-->
+                        <div class="row input-group-newsletter">
+                            <div class="col"><input class="form-control" id="emailAddress" type="email"
+                                    placeholder="Enter email address..." aria-label="Enter email address..."
+                                    data-sb-validations="required,email" /></div>
+                            <div class="col-auto"><button class="btn disabled" id="submitButton" type="submit">Notify
+                                    Me!</button></div>
+                        </div>
+                        <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is
+                            required.</div>
+                        <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email is not valid.
+                        </div>
+                        <!-- Submit success message-->
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3 mt-2 text-white">
+                                <div class="fw-bolder">Form submission successful!</div>
+                                Thank you for choosing Furtastic.
+                                <br />
+                                <a href="#"
+                                    class="register link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">Sign
+                                    up today</a>
+                                <p> and embark on a journey of exceptional pet management and companionship with
+                                    Furtastic.</p>
+                            </div>
+                        </div>
+                        <!-- Submit error message-->
+                        <div class="d-none" id="submitErrorMessage">
+                            <div class="text-center text-danger mb-3 mt-2">Error sending message!</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  ====================== Contact ====================== -->
+    <section class="contact-section">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5">
+                <h2 class="text-black mb-5">
+                    Reach Out To Us</h2>
+                <!-- Address -->
+                <div class="col-md-4 mb-3 mb-md-0 contact">
+                    <div class="card py-4 h-100" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-map-marked-alt mb-2 fa-2x"></i>
+                            <h4 class="text-uppercase m-0">Address</h4>
+                            <hr class="my-4 mx-auto" />
+                            <div class="small text-black-50">Universiti Tunku Abdul Rahman Kampar Campus, Jalan
+                                Universiti, Bandar Barat, 31900 Kampar, Perak</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Email -->
+                <div class="col-md-4 mb-3 mb-md-0 contact">
+                    <div class="card py-4 h-100" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-envelope mb-2 fa-2x"></i>
+                            <h4 class="text-uppercase m-0">Email</h4>
+                            <hr class="my-4 mx-auto" />
+                            <div class="small text-black">
+                                <a class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+                                    href=“mailto:furtastic2023@gmail.com”>furtastic2023@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Phone Number -->
+                <div class="col-md-4 mb-3 mb-md-0 whatsapp-contact">
+                    <div class="card py-4 h-100" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-body text-center">
+                            <i class="fa-brands fa-whatsapp mb-2 fa-2x"></i>
+                            <h4 class="text-uppercase m-0">Whatsapp Us</h4>
+                            <hr class="my-4 mx-auto" />
+                            <div class="small text-black-50">+6017-7700711</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- Empty for alignment -->
+    
+    <section class="contact-section">
+        <div class="container px-4 px-lg-5">
+
+        </div>
+    </section>
+
+    <!--  ====================== FOOTER ====================== -->
+    <footer class="footer small text-center text-white-50">
+        <div class="container-fluid waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <div class="sharethis-inline-follow-buttons" style="display: none;"></div>
+        <div class="social d-flex justify-content-center align-items-center">
+            <a class="mx-2" href="https://instagram.com/_furrtastic_?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D"><i
+                    class="fab fa-instagram"></i></a>
+            <a class="mx-2" href="https://twitter.com/Furtastic2023"><img src="assets/icon/twitter.svg" alt=""
+                    style="width: 1.5rem; height: 1.5rem; padding-bottom: 5px;" /></a>
+            <a class="mx-2" href="https://www.facebook.com/furtastic.2023?mibextid=ZbWKwL"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a class="mx-2" href="https://pin.it/7Gfff5a"><i class="fab fa-pinterest"></i></a>
+            <a class="mx-2" href="https://github.com/wthislifehuh/Furtastic"><i class="fab fa-github"></i></a>
+            <a class="mx-2" href="https://t.me/furtastic2023"><i class="fab fa-telegram"></i></a>
+        </div>
+        <div class="container px-4 px-lg-5">
+            <p>
+                &copy; Furtastic 2023 | All Rights Reserved
+            </p>
+        </div>
+    </footer>
+    <!-- END OF FOOTER -->
+
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- JS for Login POP UP -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="js/login_register.js"></script>
+    <!-- Subscribe Social Media Plugins -->
+    <script type="text/javascript"
+        src="https://platform-api.sharethis.com/js/sharethis.js#property=6504a3b6872d720019ee1029&product=inline-follow-buttons&source=platform"
+        async="async"></script>
+    <!-- Subscribe Form API -->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+
+</html>

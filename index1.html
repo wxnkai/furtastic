@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>Furtastic</title>
+    <meta name="author" content="Joeee, Wenkai, QiaoYi, Chunshing">
+    <meta name="description" content="Pet Management Website">
+    <meta name="keywords" content="Pet, Management, Animal, cat, dog">
+    <link rel="icon" href="assets/img/logo/logo.png">
+
+    <!-- Font Awesome icons -->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Core theme CSS-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- AOS Files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+
+
+<body id="page-top">
+    <!-- ============== Loader ============== -->
+    <div class="loader_bg">
+        <div class="loader"><img src="assets/animation/loading.gif" alt="" /></div>
+    </div>
+
+    <!-- ============== Log Out Successfully Message ============== -->
+    <div class="modal fade" id="logoutMessage" tabindex="-1" aria-labelledby="cookieconsentLabel2" aria-hidden="true"
+        data-mdb-backdrop="static" data-mdb-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary text-white">
+                    <h5 class="modal-title">Logging Out...</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-3 d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-4x fa-right-to-bracket"></i>
+                        </div>
+
+                        <div class="col-9">
+                            <p id="loginMsg">Thank you for using Furtastic. You will be signing out soon...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" id="logoutok" data-mdb-dismiss="modal">
+                        Okay
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============== Navigation Bar ============== -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top topnavbar">
+        <a class="navbar-brand" href="#page-top">
+            <img src="assets/img/logo/furtasticword4black.png" alt="Furtastic" height="60px" width="200px"
+                id="homelogo">
+        </a>
+
+        <div class="sharethis-inline-share-buttons" data-title="I love Furtastic! Visit now at: "></div>
+        <div class="custom_menu-btn">
+            <button class="openbtn" onclick="openNav()">
+                <span class="s-1">
+                </span>
+                <span class="s-2">
+                </span>
+                <span class="s-3">
+                </span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Navigation Side Bar -->
+    <div class="navOverlay">
+        <div class="overlay-content">
+            <img src="assets/img/logo/furtasticword4black.png" alt="logo" class="navlogo" width="250rem"
+                style="padding-bottom: 20px;" />
+
+            <ul class="barlist">
+                <li>
+                    <img src="assets/icon/home.png" alt="home" class="icon" />
+                    <a href="index1.html" class="active">Home</a>
+                </li>
+                <li>
+                    <img src="assets/icon/about.png" alt="home" class="icon" />
+                    <a href="index.html">About</a>
+                </li>
+                <li>
+                    <img src="assets/icon/petprofile.png" alt="home" class="icon" />
+                    <a href="#">Pet Profile</a>
+                </li>
+                <li>
+                    <img src="assets/icon/dogbowl.png" alt="Bowl" class="icon" />
+                    <a href="#">Pet Adoption</a>
+                </li>
+                <li>
+                    <img src="assets/icon/paw.png" alt="Lost" class="icon" />
+                    <a href="#">Lost & Found</a>
+                </li>
+                <li>
+                    <img src="assets/icon/appointment.png" alt="Appointment" class="icon" />
+                    <a href="#">Appointment</a>
+                </li>
+                <li>
+                    <img src="assets/icon/pet.png" alt="Appointment" class="icon" />
+                    <a href="#">Pet Service</a>
+                </li>
+                <li>
+                    <img src="assets/icon/event.png" alt="Event" class="icon" />
+                    <a href="#">Event</a>
+                </li>
+                <li>
+                    <img src="assets/icon/gallery.png" alt="Event" class="icon" />
+                    <a href="#">Gallery</a>
+                </li>
+                <li>
+                    <img src="assets/icon/instagram.png" alt="Event" class="icon" />
+                    <a href="#">Social Media</a>
+                </li>
+                <li>
+                    <img src="assets/icon/blog.png" alt="Event" class="icon" />
+                    <a href="#">Blog</a>
+                </li>
+                <li>
+                    <img src="assets/icon/testimonial.png" alt="Event" class="icon" />
+                    <a href="testimonial.html">Testimonial</a>
+                </li>
+                <li>
+                    <img src="assets/icon/faq.png" alt="Feedback" class="icon" />
+                    <a href="faqs.html">FAQs</a>
+                </li>
+                <li>
+                    <img src="assets/icon/email.png" alt="Event" class="icon" />
+                    <a href="contact.html">Contact Us</a>
+                </li>
+                <li>
+                    <img src="assets/icon/logout.png" alt="Logout" class="icon logout" />
+                    <a href="#" class="logout">Log Out</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ============== Hero Section ============== -->
+    <section>
+        <section class="hero-wrap hero-wrap-2" style="background-image: url('assets/img/background/bg-heroindex1.svg');"
+            data-stellar-background-ratio="0.5">
+            <div class="container">
+                <div class="row no-gutters slider-text align-items-end">
+                    <div class="col-md-9 ftco-animate pb-5">
+                        <p class="breadcrumbs mb-2"><span class="mr-2"></span>
+                            <span>Where Every Pet's Journey is Furtastically Managed
+                                <i class="ion-ios-arrow-forward"></i></span>
+                        </p>
+                        <h1 class="mb-0 bread">Furtastic - Home</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ============== Profile Photo Section ============== -->
+        <div class="container">
+            <div class="pic-holder">
+                <!-- uploaded pic shown here -->
+                <img id="profilePic" class="pic" src="assets/img/logo/furtasticlogo.png">
+                <Input class="uploadProfileInput" type="file" name="profile_pic" id="newProfilePhoto" accept="image/*"
+                    style="opacity: 0;" />
+                <label for="newProfilePhoto" class="upload-file-block">
+                    <div class="text-center">
+                        <div class="mb-2">
+                            <i class="fa fa-camera fa-2x"></i>
+                        </div>
+                        <div class="text-uppercase">
+                            Update <br /> Profile Photo
+                        </div>
+                    </div>
+                </label>
+                </hr>
+            </div>
+        </div>
+    </section>
+    <!-- ============== Bio Section ============== -->
+    <section class="bio">
+        <div class="container px-4 px-lg-5" style="margin-top: 4rem;">
+            <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                <div class="col-xl-6 col-lg-5">
+                    <div class="featured-text text-center text-lg-left">
+                        <h4>Welcome back, </h4>
+                        <h1 id="username">user12345</h1>
+                        <br>
+                        <p class="text-black-50 mb-0">Your Bio...</p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-7">
+                    <img class="img-fluid mb-3 mb-lg-0" id="bgpic2" src="assets/img/background/girlwithdog2.svg"
+                        alt="..." />
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============== To Do List Section ============== -->
+    <section class="container-fluid d-flex flex-column align-items-center justify-content-center" id="todo-section">
+        <div class="container text-center">
+            <div>
+                <h1 class="todo-title"><img src="assets/icon/todolist.png" alt="home" class="icon" /> Furtastic Todo
+                </h1>
+            </div>
+            <div class="container todo-container">
+                <ul class="todo-list js-todo-list"></ul>
+                <div class="empty-state">
+                    <i class="fas fa-tasks icon"></i>
+                    <p class="empty-state__description">
+                        Type in the below field 👇 and press enter to add your Pet todo✏️ in the Furtastic list
+                    </p>
+                </div>
+                <form class="formselect">
+                    <input autofocus type="text" class="inputselect" placeholder="Eg: Feed My Pet at 1.00pm">
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ============== Service ============== -->
+    <!-- Service Section -->
+    <section class="ftco-section container-fluid d-flex flex-column align-items-center justify-content-center"
+        style="padding-bottom: 10rem; padding-top: 4rem;">
+        <div class="container">
+            <div class="container-fluid align-items-center text-center mb-lg-5">
+                <h2 class="text-black mb-5">
+                    Our Services
+                </h2>
+            </div>
+            <div class="row mb-5 pb-5">
+                <!-- Pet Service -->
+                <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate service-link">
+                    <div class="d-block services text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <img src="assets/icon/pet.png" alt="Pet" />
+                        </div>
+                        <div class="media-body p-4">
+                            <h3 class="heading">Pet Service and Appointment</h3>
+                            <p>Discover a world of exceptional pet care services right in your neighborhood. Furtastic
+                                helps you manage appointments for your furry friend's needs. </p>
+                            <a href="service.html"
+                                class="btn-custom d-flex align-items-center justify-content-center"><span
+                                    class="fa fa-chevron-right text-white"></span><i class="sr-only">Read more</i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Lost and Found -->
+                <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
+                    <div class="d-block services text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <img src="assets/icon/dogbowl.png" alt="Bowl" />
+                        </div>
+                        <div class="media-body p-4">
+                            <h3 class="heading">Lost and Found</h3>
+                            <p> Report a lost pet and our community of pet lovers will keep an eye out. If you've found
+                                a lost pet, post the details here to help them find their way home. Together, we're
+                                reuniting pets with their families.</p>
+                            <a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span
+                                    class="fa fa-chevron-right text-white"></span><i class="sr-only">Read more</i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pet Adoption -->
+                <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
+                    <div class="d-block services text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <img src="assets/icon/paw.png" alt="Lost" />
+                        </div>
+                        <div class="media-body p-4">
+                            <h3 class="heading">Pet Adoption</h3>
+                            <p>Browse through profiles of lovable cats, dogs, and other pets seeking a forever home.
+                                Start a new chapter of love and companionship – adopt your loyal friend today!</p>
+                            <a href="rehome-page.html"
+                                class="btn-custom d-flex align-items-center justify-content-center"><span
+                                    class="fa fa-chevron-right text-white"></span><i class="sr-only">Read more</i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Event -->
+            <div class="row mt-5 pt-4">
+                <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
+                    <div class="d-block services text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <img src="assets/icon/event.png" alt="Event" />
+                        </div>
+                        <div class="media-body p-4">
+                            <h3 class="heading">Discover Furtastic Adventures</h3>
+                            <p>Furtastic event keeps you in the know about all things pet-related.
+                                Connect with other pet parents, explore new adventures, and
+                                create lasting memories with your furry companion.</p>
+                            <a href="event.html"
+                                class="btn-custom d-flex align-items-center justify-content-center"><span
+                                    class="fa fa-chevron-right text-white"></span><i class="sr-only">Read more</i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Social Media -->
+                <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
+                    <div class="d-block services text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <img src="assets/icon/instagram.png" alt="Instagram" />
+                        </div>
+                        <div class="media-body p-4">
+                            <h3 class="heading">Pet Social Media</h3>
+                            <p>Join us on social media and be part of a vibrant pet-loving community. Share your own
+                                pet's adventures and connect with fellow animal lovers from around the world.</p>
+                            <a href="socialmedia.html"
+                                class="btn-custom d-flex align-items-center justify-content-center"><span
+                                    class="fa fa-chevron-right text-white"></span><i class="sr-only">Read more</i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog -->
+                <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
+                    <div class="d-block services text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <img src="assets/icon/blog.png" alt="Event" />
+                        </div>
+                        <div class="media-body p-4">
+                            <h3 class="heading">Pet Blog</h3>
+                            <p>Stay up-to-date with the latest pet care tips, training hacks, and health insights. Get
+                                inspired and informed for a life of shared joy with your pets.</p>
+                            <a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span
+                                    class="fa fa-chevron-right text-white"></span><i class="sr-only">Read more</i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end services -->
+
+
+    <!-- ====================== Display ====================== -->
+    <section class="display-section text-center" id="display" style="padding-bottom: 8rem; background-color: #e0d6c6;">
+        <div class="text container">
+            <p class="text-black" id="sameline">Furtastic is</p>
+            <p id="sameline">
+                <span class="word wisteria"> caring.</span>
+                <span class="word belize"> efficient.</span>
+                <span class="word pomegranate"> reliable.</span>
+                <span class="word green"> tailored.</span>
+                <span class="word midnight"> Furtastic.</span>
+            </p>
+        </div>
+    </section>
+
+    <!--  ====================== FOOTER ====================== -->
+    <footer class="footer small text-center text-white-50">
+        <div class="container-fluid waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <div class="social d-flex justify-content-center align-items-center">
+            <a class="mx-2" href="https://instagram.com/_furrtastic_?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D"><i
+                    class="fab fa-instagram"></i></a>
+            <a class="mx-2" href="https://twitter.com/Furtastic2023"><img src="/assets/icon/twitter.svg" alt=""
+                    style="width: 1.5rem; height: 1.5rem; padding-bottom: 5px;" /></a>
+            <a class="mx-2" href="https://www.facebook.com/furtastic.2023?mibextid=ZbWKwL"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a class="mx-2" href="https://pin.it/7Gfff5a"><i class="fab fa-pinterest"></i></a>
+            <a class="mx-2" href="https://github.com/wthislifehuh/Furtastic"><i class="fab fa-github"></i></a>
+            <a class="mx-2" href="https://t.me/furtastic2023"><i class="fab fa-telegram"></i></a>
+        </div>
+        <div class="container px-4 px-lg-5">
+            <p>
+                &copy; Furtastic 2023 | All Rights Reserved
+            </p>
+        </div>
+    </footer>
+    <!-- END OF FOOTER -->
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script src="js/todo.js"></script>
+    <!-- AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- JS for Login POP UP -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="js/login_register.js"></script>
+    <!-- Subscribe Form API -->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <!-- Subscribe Social Media Plugins -->
+    <script type="text/javascript"
+        src="https://platform-api.sharethis.com/js/sharethis.js#property=6504b58b572cd20019e849c8&product=inline-share-buttons&source=platform"
+        async="async"></script>
+
+
+    <script type="text/javascript">
+        /* ===============================================
+        Toggle Side Bar
+        ============================================== */
+
+        function openNav() {
+            document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style");
+
+            var navOverlay = document.querySelector(".navOverlay");
+            var shareButtons = document.querySelector(".sharethis-inline-share-buttons");
+
+            navOverlay.classList.toggle("menu_width");
+
+            if (navOverlay.classList.contains("menu_width")) {
+                shareButtons.style.display = "none";
+            } else {
+                shareButtons.style.display = "block";
+            }
+        }
+
+        /* ===============================================
+            Profile Picture
+     ============================================== */
+        // Check if there's a stored profile picture in local storage
+        const storedProfilePicture = localStorage.getItem("profilePicture");
+
+        if (storedProfilePicture) {
+            // Display the stored profile picture
+            $(".pic").attr("src", storedProfilePicture);
+        }
+        else {
+            $(".pic").attr("src", "assets/img/logo/furtasticlogo.png");
+        }
+
+        $(document).on("change", ".uploadProfileInput", function () {
+            const triggerInput = this;
+            const holder = $(this).closest(".pic-holder");
+            const wrapper = $(this).closest(".profile-pic-wrapper");
+            const files = this.files;
+
+            // Remove any existing alert messages
+            $(wrapper).find('[role="alert"]').remove();
+
+            if (!files.length || !window.FileReader) {
+                return;
+            }
+
+            if (!/^image/.test(files[0].type)) {
+                // Display an error message for invalid file type
+                $(wrapper).append(
+                    '<div class="alert alert-danger d-inline-block p-2 small" role="alert">Please choose a valid image.</div>'
+                );
+                setTimeout(() => {
+                    $(wrapper).find('[role="alert"]').remove();
+                }, 3000);
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.readAsDataURL(files[0]);
+
+            reader.onloadend = function () {
+                // Display a loading spinner during the upload process
+                holder.addClass("uploadInProgress");
+                holder.find(".pic").attr("src", this.result);
+                holder.append(
+                    '<div class="upload-loader"><div class="spinner-border text-primary" role="status"><span class="sr-only">Loading...</span></div></div>'
+                );
+
+                // Simulate an asynchronous upload process
+                setTimeout(() => {
+                    holder.removeClass("uploadInProgress");
+                    holder.find(".upload-loader").remove();
+
+                    // If upload is successful
+                    if (Math.random() < 0.9) {
+                        $(wrapper).append(
+                            '<div class="snackbar show" role="alert"><i class="fa fa-check-circle text-success"></i> Profile image updated successfully</div>'
+                        );
+
+                        // Clear the input field after upload
+                        $(triggerInput).val("");
+
+                        setTimeout(() => {
+                            $(wrapper).find('[role="alert"]').remove();
+                        }, 3000);
+
+                        // Save the profile picture data URL to local storage
+                        if (typeof Storage !== "undefined") {
+                            localStorage.setItem("profilePicture", reader.result);
+                        } else {
+                            alert("Your browser does not support local storage");
+                        }
+                    } else {
+                        // Display an error message for upload failure
+                        holder.find(".pic").attr("src", storedProfilePicture || "");
+                        $(wrapper).append(
+                            '<div class="snackbar show" role="alert"><i class="fa fa-times-circle text-danger"></i> There was an error while uploading! Please try again later.</div>'
+                        );
+
+                        // Clear the input field after upload
+                        $(triggerInput).val("");
+
+                        setTimeout(() => {
+                            $(wrapper).find('[role="alert"]').remove();
+                        }, 3000);
+                    }
+                }, 1500);
+            };
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

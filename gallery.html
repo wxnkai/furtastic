@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>Furtastic</title>
+    <meta name="author" content="Joeee, Wenkai, QiaoYi, Chunshing">
+    <meta name="description" content="Pet Management Website">
+    <meta name="keywords" content="Pet, Management, Animal, cat, dog">
+    <link rel="icon" href="/assets/img/logo/logo.png">
+
+    <!-- ==========================================================
+                CSS
+    ========================================================== -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <!-- Font style -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins:400,700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome icons -->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    <!-- Core theme CSS-->
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="sub_page">
+    <div class="hero_area ">
+        <!-- ============== Loader ============== -->
+        <div class="loader_bg">
+            <div class="loader"><img src="assets/animation/loading.gif" alt="" /></div>
+        </div>
+
+        <!-- ============== Navigation Bar ============== -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top topnavbar">
+            <a class="navbar-brand" href="#page-top">
+                <img src="assets/img/logo/furtasticword4black.png" alt="Furtastic" height="60px" width="200px"
+                    id="homelogo">
+            </a>
+            <div class="sharethis-inline-share-buttons" data-title="I love Furtastic! Visit now at: "></div>
+            <div class="custom_menu-btn">
+                <button class="openbtn" onclick="openNav()">
+                    <span class="s-1">
+                    </span>
+                    <span class="s-2">
+                    </span>
+                    <span class="s-3">
+                    </span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Navigation Side Bar -->
+        <div class="navOverlay">
+            <div class="overlay-content">
+                <img src="/assets/img/logo/furtasticword4black.png" alt="logo" class="navlogo" width="250rem"
+                    style="padding-bottom: 20px;" />
+
+                <ul class="barlist">
+                    <li>
+                        <img src="assets/icon/home.png" alt="home" class="icon" />
+                        <a href="index.html">About</a>
+                    </li>
+                    <li>
+                        <img src="assets/icon/dogbowl.png" alt="Bowl" class="icon" />
+                        <a href="#">Pet Adoption</a>
+                    </li>
+                    <li>
+                        <img src="assets/icon/paw.png" alt="Lost" class="icon" />
+                        <a href="#">Lost & Found</a>
+                    </li>
+                    <li>
+                        <img src="assets/icon/event.png" alt="Event" class="icon" />
+                        <a href="event.html">Event</a>
+                    </li>
+                    <li>
+                        <img src="assets/icon/instagram.png" alt="Event" class="icon" />
+                        <a href="socialmedia.html">Social Media</a>
+                    </li>
+                    <li>
+                        <img src="assets/icon/blog.png" alt="Event" class="icon" />
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <img src="assets/icon/testimonial.png" alt="Event" class="icon" />
+                        <a href="testimonial.html">Testimonial</a>
+                    </li>
+                    <li>
+                        <img src="assets/icon/faq.png" alt="Feedback" class="icon" />
+                        <a href="faqs.html" class="active">FAQs</a>
+                    </li>
+                    <li>
+                        <img src="assets/icon/email.png" alt="Event" class="icon" />
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+
+                    <li>
+                        <img src="assets/icon/logout.png" alt="Logout" class="icon logout" />
+                        <a href="#">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- ============== Hero Section ============== -->
+        <section>
+            <section class="hero-wrap hero-wrap-2"
+                style="background-image: url('assets/img/background/bg-heroindex1.svg');"
+                data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row no-gutters slider-text align-items-end">
+                        <div class="col-md-9 ftco-animate pb-5">
+                            <p class="breadcrumbs mb-2"><span class="mr-2"></span>
+                                <span>Where Every Pet's Journey is Furtastically Managed
+                                    <i class="ion-ios-arrow-forward"></i></span>
+                            </p>
+                            <h1 class="mb-0 bread">Furtastic Gallery</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- ============== Gallery Section ============== -->
+        <section class="ftco-section" id="gallery-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="gallery" id="gallery">
+                            <div class="row justify-content-center">
+
+                                <!-- Item 1 -->
+                                <div class="post-thumb col-lg-3 col-md-4 col-sm-12 m-3 p-0">
+                                    <img src="assets/img/gallery/gallery-1.jpg" alt="">
+
+                                    <div class="post-hover">
+                                        <div class="inside">
+                                            <span class="date">25 Jan 2084</span>
+                                            <h4>Lucky</h4>
+                                            <p>
+                                                Furtastic Cat
+                                                <hr>
+                                                <a href="assets/img/gallery/gallery-1.jpg"><i
+                                                        class="fa-solid fa-expand fa-2x"></i></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End of item -->
+
+                                <!-- Item 2-->
+                                <div class="post-thumb col-lg-3 col-md-4 col-sm-12 m-3 p-0">
+                                    <img src="assets/img/gallery/gallery-2.jpg" alt="">
+
+                                    <div class="post-hover">
+                                        <div class="inside">
+                                            <span class="date">25 Jan 2084</span>
+                                            <h4>Lucky</h4>
+                                            <p>
+                                                Furtastic Cat
+                                                <hr>
+                                                <a href="assets/img/gallery/gallery-2.jpg"><i
+                                                        class="fa-solid fa-expand fa-2x"
+                                                        style="color: #ffffff;"></i></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End of item -->
+
+
+                                <!-- Item 3-->
+                                <div class="post-thumb col-lg-3 col-md-4 col-sm-12 m-3 p-0">
+                                    <img src="assets/img/gallery/gallery-3.jpg" alt="">
+
+                                    <div class="post-hover">
+                                        <div class="inside">
+                                            <span class="date">25 Jan 2084</span>
+                                            <h4>Lucky</h4>
+                                            <p>
+                                                Furtastic Cat
+                                                <hr>
+                                                <a href="assets/img/gallery/gallery-3.jpg"><i
+                                                        class="fa-solid fa-expand fa-2x"
+                                                        style="color: #ffffff;"></i></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End of item -->
+
+
+                                <!-- Item 4-->
+                                <div class="post-thumb col-lg-3 col-md-4 col-sm-12 m-3 p-0">
+                                    <img src="assets/img/gallery/gallery-4.jpg" alt="">
+
+                                    <div class="post-hover">
+                                        <div class="inside">
+                                            <span class="date">25 Jan 2084</span>
+                                            <h4>Lucky</h4>
+                                            <p>
+                                                Furtastic Cat
+                                                <hr>
+                                                <a href="assets/img/gallery/gallery-4.jpg"><i
+                                                        class="fa-solid fa-expand fa-2x"
+                                                        style="color: #ffffff;"></i></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End of item -->
+
+
+                                <!-- Item 5 -->
+                                <div class="post-thumb col-lg-3 col-md-4 col-sm-12 m-3 p-0">
+                                    <img src="assets/img/gallery/gallery-5.jpg" alt="">
+
+                                    <div class="post-hover">
+                                        <div class="inside">
+                                            <span class="date">25 Jan 2084</span>
+                                            <h4>Lucky</h4>
+                                            <p>
+                                                Furtastic Cat
+                                                <hr>
+                                                <a href="assets/img/gallery/gallery-5.jpg"><i
+                                                        class="fa-solid fa-expand fa-2x"
+                                                        style="color: #ffffff;"></i></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End of item -->
+
+
+                                <!-- Item 6 -->
+                                <div class="post-thumb col-lg-3 col-md-4 col-sm-12 m-3 p-0">
+                                    <img src="assets/img/gallery/gallery-6.jpg" alt="">
+
+                                    <div class="post-hover">
+                                        <div class="inside">
+                                            <span class="date">25 Jan 2084</span>
+                                            <h4>Lucky</h4>
+                                            <p>
+                                                Furtastic Cat
+                                                <hr>
+                                                <a href="https://source.unsplash.com/random/150x150?pet"><i
+                                                        class="fa-solid fa-expand fa-2x"
+                                                        style="color: #ffffff;"></i></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End of item -->
+
+
+                                <!-- Item 7 -->
+                                <div class="post-thumb col-lg-3 col-md-4 col-sm-12 m-3 p-0">
+                                    <img src="assets/img/gallery/gallery-7.jpg" alt="">
+
+                                    <div class="post-hover">
+                                        <div class="inside">
+                                            <span class="date">25 Jan 2084</span>
+                                            <h4>Lucky</h4>
+                                            <p>
+                                                Furtastic Cat
+                                                <hr>
+                                                <a href="assets/img/gallery/gallery-7.jpg"><i
+                                                        class="fa-solid fa-expand fa-2x"
+                                                        style="color: #ffffff;"></i></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End of item -->
+
+
+                                <!-- Item 8 -->
+                                <div class="post-thumb col-lg-3 col-md-4 col-sm-12 m-3 p-0">
+                                    <img src="assets/img/gallery/gallery-8.jpg" alt="">
+
+                                    <div class="post-hover">
+                                        <div class="inside">
+                                            <span class="date">25 Jan 2084</span>
+                                            <h4>Lucky</h4>
+                                            <p>
+                                                Furtastic Cat
+                                                <hr>
+                                                <a href="assets/img/gallery/gallery-8.jpg"><i
+                                                        class="fa-solid fa-expand fa-2x"
+                                                        style="color: #ffffff;"></i></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End of item -->
+
+
+                                <!-- Item 9 -->
+                                <div class="post-thumb col-lg-3 col-md-4 col-sm-12 m-3 p-0">
+                                    <img src="assets/img/gallery/gallery-9.jpg" alt="">
+
+                                    <div class="post-hover">
+                                        <div class="inside">
+                                            <span class="date">25 Jan 2084</span>
+                                            <h4>Lucky</h4>
+                                            <p>
+                                                Furtastic Cat
+                                                <hr>
+                                                <a href="assets/img/gallery/gallery-9.jpg"><i
+                                                        class="fa-solid fa-expand fa-2x"
+                                                        style="color: #ffffff;"></i></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End of item -->
+
+
+                                <!-- Item 10 -->
+                                <div class="post-thumb col-lg-3 col-md-4 col-sm-12 m-3 p-0">
+                                    <img src="assets/img/gallery/gallery-10.jpg" alt="">
+
+                                    <div class="post-hover">
+                                        <div class="inside">
+                                            <span class="date">25 Jan 2084</span>
+                                            <h4>Lucky</h4>
+                                            <p>
+                                                Furtastic Cat
+                                                <hr>
+                                                <a href="assets/img/gallery/gallery-10.jpg"><i
+                                                        class="fa-solid fa-expand fa-2x"
+                                                        style="color: #ffffff;"></i></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End of item -->
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END of gallery -->
+
+
+        <!-- ====================== Display ====================== -->
+        <section class="display-section text-center" id="display"
+            style="padding-bottom: 8rem; background-color: #e0d6c6;">
+            <div class="text container">
+                <p class="text-black" id="sameline">Furtastic is</p>
+                <p id="sameline">
+                    <span class="word wisteria"> caring.</span>
+                    <span class="word belize"> efficient.</span>
+                    <span class="word pomegranate"> reliable.</span>
+                    <span class="word green"> tailored.</span>
+                    <span class="word midnight"> Furtastic.</span>
+                </p>
+            </div>
+        </section>
+
+        <!--  ====================== FOOTER ====================== -->
+        <footer class="footer small text-center text-white-50">
+            <div class="container-fluid waves">
+                <div class="wave" id="wave1"></div>
+                <div class="wave" id="wave2"></div>
+                <div class="wave" id="wave3"></div>
+                <div class="wave" id="wave4"></div>
+            </div>
+            <div class="social d-flex justify-content-center align-items-center">
+                <a class="mx-2" href="https://instagram.com/_furrtastic_?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D"><i
+                        class="fab fa-instagram"></i></a>
+                <a class="mx-2" href="https://twitter.com/Furtastic2023"><img src="/assets/icon/twitter.svg" alt=""
+                        style="width: 1.5rem; height: 1.5rem; padding-bottom: 5px;" /></a>
+                <a class="mx-2" href="https://www.facebook.com/furtastic.2023?mibextid=ZbWKwL"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a class="mx-2" href="https://pin.it/7Gfff5a"><i class="fab fa-pinterest"></i></a>
+                <a class="mx-2" href="https://github.com/wthislifehuh/Furtastic"><i class="fab fa-github"></i></a>
+                <a class="mx-2" href="https://t.me/furtastic2023"><i class="fab fa-telegram"></i></a>
+            </div>
+            <div class="container px-4 px-lg-5">
+                <p>
+                    &copy; Furtastic 2023 | All Rights Reserved
+                </p>
+            </div>
+        </footer>
+        <!-- END OF FOOTER -->
+
+        <!-- ==========================================================
+                JavaScript
+        ========================================================== -->
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- Subscribe Social Media Plugins -->
+        <script type="text/javascript"
+            src="https://platform-api.sharethis.com/js/sharethis.js#property=6504b58b572cd20019e849c8&product=inline-share-buttons&source=platform"
+            async="async"></script>
+        <!-- Social Media -->
+        <script async src="//www.instagram.com/embed.js"></script>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+        <!-- Custom JS -->
+        <script>
+            /* ===============================================
+            Toggle Side Bar
+            ============================================== */
+            function openNav() {
+                document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style");
+
+                var navOverlay = document.querySelector(".navOverlay");
+                var shareButtons = document.querySelector(".sharethis-inline-share-buttons");
+
+                navOverlay.classList.toggle("menu_width");
+
+                if (navOverlay.classList.contains("menu_width")) {
+                    shareButtons.style.display = "none";
+                } else {
+                    shareButtons.style.display = "block";
+                }
+            }
+        </script>
+
+</body>
+
+</html>
